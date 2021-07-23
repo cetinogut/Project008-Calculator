@@ -160,9 +160,14 @@ function AllClear() {
 
 function ClearLast(){
 
-  // console.log({temporaryOperand});
-  // console.log({currentOperand})
+  console.log({temporaryOperand});
+  console.log({currentOperand})
+  console.log({previousOperand})
+  console.log({operation})
 
+  // if(currentOperand){ // 66 most probably user will delete numbers and can add new ones if desired
+  //   currentOperand = currentOperand.slice(0, currentOperand.length - 1);
+  // }
   if( previousOperand && operation && currentOperand){  // 66 + 5 -> will delete 5
     currentOperand = currentOperand.slice(0, currentOperand.length - 1);
     
@@ -177,6 +182,7 @@ function ClearLast(){
   } else if(previousOperand){ // 66 most probably user will delete numbers and can add new ones if desired
     previousOperand = previousOperand.slice(0, previousOperand.length - 1);
   }
+
   // console.log({temporaryOperand});
   // console.log({currentOperand})
   // console.log({operation})
